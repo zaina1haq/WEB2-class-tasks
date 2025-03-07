@@ -1,10 +1,10 @@
 import { timer, getRemainingTime, updateClock, switchMode } from './timer.js';
 import { setupSettings } from './settings.js';
 import { setupTasks } from './tasks.js';
-import '../css/styles.css';  // إضافة استيراد ملف الستايل
+import '../css/styles.css';  
 
 let interval;
-let isRunning = false;  // إضافة متغير للتحكم بحالة المؤقت
+let isRunning = false;  
 
 const mainButton = document.getElementById('js-btn');
 
@@ -59,7 +59,6 @@ function startTimer() {
 
             document.querySelector(`[data-sound="${timer.mode}"]`).play();
             
-            // Remove automatic start
             mainButton.textContent = 'Start';
             mainButton.classList.remove('active');
         }
@@ -81,11 +80,9 @@ function handleMode(event) {
 
     if (!mode) return;
 
-    // Reset timer state before switching mode
     clearInterval(interval);
     isRunning = false;
 
-    // Switch mode and update UI
     switchMode(mode, timer, document);
     mainButton.textContent = 'Start';
     mainButton.classList.remove('active');
@@ -107,5 +104,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupSettings(document);
     setupTasks(document);
-    switchMode('pomodoro', timer, document); // This should initialize timer.remainingTime
+    switchMode('pomodoro', timer, document); 
 });
