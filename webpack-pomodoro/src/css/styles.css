@@ -43,7 +43,7 @@ progress::-webkit-progress-value {
   background-color: var(--white);
 }
 
-/* إعدادات المؤقت */
+
 .settings {
   width: 80%;
   max-width: 400px;
@@ -100,7 +100,6 @@ progress::-webkit-progress-value {
   text-align: center;
 }
 
-/* بقية الأنماط */
 .timer {
   text-align: center;
   margin: 20px auto;
@@ -168,7 +167,6 @@ button:focus, button:active {
   display: none;
 }
 
-/* المهام */
 .tasks {
   width: 80%;
   max-width: 400px;
