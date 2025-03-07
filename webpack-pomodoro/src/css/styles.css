@@ -1,0 +1,258 @@
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pomodoro: hsl(223, 25%, 40%);
+  --shortBreak: hsl(48, 23%, 40%);
+  --longBreak: hsl(105, 16%, 40%);
+  --white: #ffffff;
+  --light-gray: #f0f0f0;
+  --dark-gray: #333333;
+}
+
+body {
+  background-color: var(--pomodoro);
+  transition: background-color 1s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--white);
+  padding: 20px;
+}
+
+progress {
+  border-radius: 2px;
+  width: 100%;
+  height: 12px;
+  position: fixed;
+  top: 0;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--white);
+}
+
+/* إعدادات المؤقت */
+.settings {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.setting-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.setting {
+  text-align: center;
+}
+
+.setting label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.setting-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.setting-controls button {
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.setting-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.setting-controls span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  min-width: 40px;
+  text-align: center;
+}
+
+/* بقية الأنماط */
+.timer {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.clock {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+.mode-button {
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 300;
+  color: var(--white);
+  border: 1px solid transparent;
+  margin: 0px 5px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: none;
+}
+
+.mode-button.active {
+  border-color: var(--white);
+}
+
+.main-button {
+  cursor: pointer;
+  box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+  font-size: 22px;
+  height: 55px;
+  text-transform: uppercase;
+  color: var(--pomodoro);
+  font-weight: bold;
+  width: 200px;
+  background-color: var(--white);
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* المهام */
+.tasks {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--dark-gray);
+}
+
+.task-input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.task-input button {
+  padding: 8px 12px;
+  background-color: var(--pomodoro);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background-color: hsl(223, 25%, 35%);
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#task-list li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+#task-list li button.complete-btn {
+  background-color: var(--pomodoro);
+  margin-right: 8px;
+}
+
+#task-list li button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 550px) {
+  .clock {
+    font-size: 6rem;
+  }
+
+  .settings, .tasks {
+    width: 90%;
+  }
+
+  .setting-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
