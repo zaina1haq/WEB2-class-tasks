@@ -7,14 +7,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'react-icons/fa': 'react-icons/fa/index.js', // حل مشكلة استيراد react-icons
+      'react-icons/fa': 'react-icons/fa/index.js', 
     },
   },
   build: {
     rollupOptions: {
-      external: ['bootstrap', 'react-icons'], // ضمان عدم حصول مشاكل في الاستيراد
+      external: ['bootstrap', 'react-icons'], 
     },
   },
-  publicDir: 'public', // تأكد أن الصور داخل مجلد public سيتم قراءتها بشكل صحيح
-  assetsInclude: ['/.png', '/.jpg', '/.jpeg', '/.svg'], // دعم تحميل الصور
+  publicDir: 'public', 
+  assetsInclude: ['/.png', '/.jpg', '/.jpeg', '/.svg'], 
 });
