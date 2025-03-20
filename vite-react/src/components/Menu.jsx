@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBed, FaTicketAlt, FaUtensils, FaBus, FaTaxi, FaFilm } from 'react-icons/fa';
+import { FaBed, FaTicketAlt, FaUtensils, FaBus, FaTaxi, FaFilm } from "react-icons/fa";
 import './Menu.css'; 
 
 const Menu = () => {
