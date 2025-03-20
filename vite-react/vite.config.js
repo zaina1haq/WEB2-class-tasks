@@ -14,6 +14,8 @@ export default defineConfig({
     rollupOptions: {
       external: ['bootstrap', 'react-icons'], 
     },
+    outDir: 'dist',
+    sourcemap: true,
   },
   publicDir: 'public', 
   assetsInclude: ['/.png', '/.jpg', '/.jpeg', '/.svg'], 
