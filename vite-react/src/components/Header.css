@@ -1,0 +1,100 @@
+.navbar {
+  padding: 10px 20px;
+}
+
+.nf {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+.bolds {
+  font-weight: bold;
+}
+.lights {
+  color: #66b3ff;
+}
+.navv{
+  list-style: none;
+  display: flex;
+  gap: 15px; 
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.navv li {
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.navv li:hover {
+  color: #007bff;
+}
+
+.heads {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bell {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.profilepic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heads {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .navv {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navv li {
+    font-size: 16px;
+  }
+
+  .bell {
+    font-size: 20px;
+  }
+
+  .profilepic {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nf {
+    font-size: 18px;
+  }
+
+  .navv li {
+    font-size: 14px;
+  }
+
+  .bell {
+    font-size: 18px;
+  }
+
+  .profilepic {
+    width: 24px;
+    height: 24px;
+  }
+}

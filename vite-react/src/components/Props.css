@@ -1,0 +1,66 @@
+.props-container {
+  display: flex;
+  flex-wrap: wrap; 
+
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px;
+  
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; 
+  max-width: 300px; 
+  transition: transform 0.3s ease; 
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.city-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.reviews {
+  font-size: 14px;
+  color: #020202;
+}
+@media (min-width: 600px) {
+  .card {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: calc(25% - 20px); 
+  }
+}
