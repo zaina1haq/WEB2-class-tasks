@@ -14,7 +14,7 @@ const Header = () => {
           <li>Offers</li>
         </ul>
         <span className="bell">🔔</span>
-        <img className="profilepic" src="/src/assets/profileimg.jpg" alt="Profile" />
+        <img className="profilepic" src="/assets/profileimg.jpg" alt="Profile" />
       </div>
     </nav>
   );

@@ -15,5 +15,5 @@ export default defineConfig({
     sourcemap: true,
   },
   publicDir: 'public', 
-  assetsInclude: ['/.png', '/.jpg', '/.jpeg', '/.svg'], 
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg']
 });
